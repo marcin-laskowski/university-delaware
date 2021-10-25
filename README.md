@@ -4,6 +4,9 @@ The following repository is based on the [tensorflow_app](https://github.com/mlu
 
 ## Local run
 ```bash
+# Change the directory
+cd carolina_bays
+
 # Run a model locally
 python3 run.py
 
