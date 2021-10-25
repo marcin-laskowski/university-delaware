@@ -45,7 +45,7 @@ def run(opt):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--image', default="https://images.pexels.com/photos/2083866/pexels-photo-2083866.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260", type=str, help='URL to a sample input data')
+    parser.add_argument('--image', default="https://raw.githubusercontent.com/marcin-laskowski/university-delaware/master/carolina_bays/sample_data/bay.png", type=str, help='URL to a sample input data')
     parser.add_argument('--save', action='store_true', help='Save output image in the ./output directory')
     parser.add_argument('--response', default=True, type=bool, help='Print a response in the terminal')
     opt = parser.parse_args()
