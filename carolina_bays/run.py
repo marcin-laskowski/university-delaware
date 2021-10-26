@@ -1,16 +1,11 @@
 import os
-import json
 import argparse
 
-import torch
-import gdown
-from PIL import Image
-
-from helpers import draw_box, url_to_img, img_to_bytes, bytes_to_img
+from helpers import bytes_to_img
 from syndicai import PythonPredictor
 
 
-sample_data = ""
+sample_data = "https://raw.githubusercontent.com/marcin-laskowski/university-delaware/master/carolina_bays/sample_data/bay.png"
 output_dir = "./output"
 save_response = True
 
@@ -45,7 +40,7 @@ def run(opt):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--image', default="https://raw.githubusercontent.com/marcin-laskowski/university-delaware/master/carolina_bays/sample_data/bay.png", type=str, help='URL to a sample input data')
+    parser.add_argument('--image', default=sample_data, type=str, help='URL to a sample input data')
     parser.add_argument('--save', action='store_true', help='Save output image in the ./output directory')
     parser.add_argument('--response', default=True, type=bool, help='Print a response in the terminal')
     opt = parser.parse_args()
